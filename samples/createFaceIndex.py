@@ -18,7 +18,14 @@ if collectionId in list_response['CollectionIds']:
 
 rek_client.create_collection(CollectionId = collectionId)
 
-for content in all_objects['Contents']:
+contents = []
+
+if hasattr(all_objects, 'Contents'):
+    contents = all_objects['Contents']
+if len(contents) == 0:
+    print("\x1B[31;40m" + "Please upload your photo to %s Bucket" % (bucket) + "\x1B[31;40m0m")
+
+for content in contents:
     collection_name,collection_image =content['Key'].split('/')
     if collection_image:
         label = collection_name
