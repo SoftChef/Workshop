@@ -2,6 +2,10 @@ HKPC Workshop
 =====
 https://docs.google.com/presentation/d/1HaaZnJyDwmkY9jQIGIVPQMNGPL5MAGeQJ_zyRxLQ3E4/edit#slide=id.g5fe9e099e6_0_170
 
+### Wifi連線
+
+https://weworkweplay.com/play/automatically-connect-a-raspberry-pi-to-a-wifi-network/
+
 ### 新的映像檔環境建置完整指令紀錄
 
 使用 2018-11-02-ubuntu-16.04-mate-desktop-preview-bpi-m64-aarch64-sd-emmc.img 
