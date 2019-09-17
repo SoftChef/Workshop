@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 import boto3
 
-s3_client = boto3.client('s3', region_name = 'us-east-1')
+s3_client = boto3.client('s3')
 
 collectionId = 'mycollection' #collection name
 
-rek_client = boto3.client('rekognition', region_name = 'us-east-1')
+rek_client = boto3.client('rekognition')
 
-bucket = 'hkpc-face-indexs-us-east-1' #S3 bucket name
+bucket = 'hkpc-face-indexs-' + s3_client.meta.region_name #S3 bucket name
 
 all_objects = s3_client.list_objects(Bucket = bucket)
 

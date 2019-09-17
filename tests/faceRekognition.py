@@ -8,7 +8,7 @@ led = Led()
 buzzer = Buzzer()
 collectionId='mycollection'
 
-rek_client = boto3.client('rekognition', region_name = 'eu-west-1')
+rek_client = boto3.client('rekognition')
 
 width = '1280'
 height = '960'
