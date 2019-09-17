@@ -1,0 +1,74 @@
+# Workshop 總時間 3 小時
+	- 主講介紹 (共 15 分)
+	- 一個口令一個動作 (共 85 ~ 100 分) (含Buffer)
+	- 各組加分題時間 (共 40 分)
+	- 頒獎 (共 5 分)
+	- Workshop結尾 (共 25 分)
+
+## 主講介紹 (共 15 分)
+
+1. 情境介紹 (5分)
+2. 評分標準 (5分)
+3. 器材介紹 (5分)
+
+## 一個口令一個動作 (共 85 ~ 100 分) (含Buffer)
+
+4. Web端前置作業 (使用自己的電腦) (10分)
+	- 準備AWS Account
+	- 註冊sensor.live Account
+	- sensor.live 專案連線IoT
+
+5. App端前置作業 (5分)
+	- 下載Workshop App
+	- 輸入sensor.live帳密
+
+6. 開發板端前置作業 (10~15分)
+	- 接上sensor
+	- 開機後接上螢幕/滑鼠/鍵盤
+	- 網路設定 (有線/無線)
+	- 下載Workshop代碼 git clone https://github.com/SoftChef/Workshop.git
+
+7. sensor.live建立物件類型(Thing Type) (5分)
+	- 輸入指定名稱 (Gateway)
+	- 將History Module啟用
+
+8. sensor.live建立物件(Thing) (10分)
+	- 選擇物件類型(Gateway)
+	- 實作Connection Kit
+		- 選擇 Linux
+		- 選擇 Python
+		- 下載壓縮檔
+		- 將壓縮檔搬到開發板 (如果是下載在自己的電腦必須使用 "scp指令" 或 "sftp工具" 將檔案丟到開發版)
+		- 按步驟執行指令
+	- 確認MQTT 收發正常
+
+9. AWS Console設定SNS (5分)
+
+10. sensor.live 設定 IoT Rule (5分)
+
+11. 將Connection Kit 憑證搬移到開發版端Workshop代碼的certs目錄 (~/Desktop/Workshop/certs) (5分) 
+	- 如果是下載在自己的電腦必須使用 "scp指令" 或 "sftp工具" 將檔案丟到指定目錄下
+
+12. 執行基本情境的程式碼 (15分)
+	- cd ~/Desktop/Workshop/samples
+	- sudo python lightRegulator.py
+	- 確認"照明節能"情境功能
+		- [ ] 物件詳細頁收到設備回報狀態
+		- [ ] 發生異常事件收到Email通知 (當溫度過高)
+		- [ ] App控制該情境可控制元件 (Led燈on/off)
+	- sudo python airQuality.py
+	- 確認"環境控制"情境功能
+		- [ ] 物件詳細頁收到設備回報狀態
+		- [ ] 發生異常事件收到Email通知 (當二氧化碳濃度過高)
+		- [ ] App控制該情境可控制元件 (風扇on/off)
+
+13. sensor.live畫出圖表(Widget) (5分)
+	- 到物件類型定義Property
+	- 建立儀表板(Dashboard)
+	- 建立圖表
+
+## 各組加分題時間 (共 50 分)
+
+## 頒獎 (共 10 分)
+
+## 主持人結尾 (共 10 分)
