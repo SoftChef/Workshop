@@ -7,7 +7,7 @@ import boto3
 
 collectionId='mycollection'
 
-rek_client = boto3.client('rekognition', region_name = 'us-east-1')
+rek_client = boto3.client('rekognition')
 
 width = '1280'
 height = '960'
@@ -33,8 +33,8 @@ def main():
                     break
                 else:
                     print('No faces matched')
-            except:
-                print('No face detected')
+            except Exception as e:
+                print('No face detected', str(e))
         time.sleep(2)
         # Remove the file
         os.remove(path)
