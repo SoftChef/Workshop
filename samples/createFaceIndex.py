@@ -23,7 +23,9 @@ contents = []
 if hasattr(all_objects, 'Contents'):
     contents = all_objects['Contents']
 if len(contents) == 0:
-    print("\x1B[31;40m" + "Please upload your photo to %s Bucket" % (bucket) + "\x1B[31;40m0m")
+    print "================================================"
+    print "Please upload your photo to %s Bucket" % (bucket)
+    print "================================================"
 
 for content in contents:
     collection_name,collection_image =content['Key'].split('/')
