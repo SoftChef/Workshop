@@ -20,7 +20,7 @@ rek_client.create_collection(CollectionId = collectionId)
 
 contents = []
 
-if hasattr(all_objects, 'Contents'):
+if 'Contents' in all_objects:
     contents = all_objects['Contents']
 if len(contents) == 0:
     print "================================================"
